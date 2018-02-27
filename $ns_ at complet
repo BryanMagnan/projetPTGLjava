@@ -1,0 +1,27 @@
+package deplacement;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Nsatcomplet {
+//	
+// Pour sortir 123 0 10000.0 100.0 11.11 de "$ns_ at 123.00 \"$node_(0) setdest 10000.0 100.0 11.11"
+//
+	private static final Pattern p = Pattern.compile("\\$ns_ at ([0-9]+.?[0-9]*) \\\"\\$node_\\(([0-9]+.?[0-9]*)\\) setdest ([0-9]+.?[0-9]*) ([0-9]+.?[0-9]*) ([0-9]+.?[0-9]*)\\\"");
+	public static void main (String[] args) {
+	    // create matcher for pattern p and given string
+		String move ="$ns_ at 123.00 \"$node_(0) setdest 10000.0 100.0 11.11\"";
+	    Matcher m = p.matcher(move);
+
+	    // if an occurrence if a pattern was found in a given string...
+	    if (m.find()) {
+	        // ...then you can use group() methods.
+	        System.out.println(m.group(0)); // whole matched expression
+	        System.out.println(m.group(1)); // $ns_ at 
+	        System.out.println(m.group(2)); // $node_()
+	        System.out.println(m.group(3)); // setdest 1
+	        System.out.println(m.group(4)); // setdest 2
+	        System.out.println(m.group(5)); // setdest 3 (speed)
+	    }
+	}
+}
