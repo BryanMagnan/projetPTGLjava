@@ -1,0 +1,24 @@
+package deplacement;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Nodecomplet {
+//	
+// Pour sortir 2 1.5 de "$node_(2) set Z_ 1.5"
+//
+	private static final Pattern p = Pattern.compile("\\$node_\\(([0-9]+.?[0-9]*)\\)\\s+set Z_ ([0-9]+.?[0-9]*)");
+	public static void main (String[] args) {
+	    // create matcher for pattern p and given string
+		String y = "$node_(2) set Z_ 1.5" ;
+	    Matcher m = p.matcher(y);
+
+	    // if an occurrence if a pattern was found in a given string...
+	    if (m.find()) {
+	        // ...then you can use group() methods.
+	        System.out.println(m.group(0)); // whole matched expression
+	        System.out.println(m.group(1)); // $node_() value
+	        System.out.println(m.group(2)); // set Z_ value
+	    }
+	}
+}
