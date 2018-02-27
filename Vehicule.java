@@ -1,4 +1,4 @@
-import java.awt.Graphics;
+
 import java.util.ArrayList;
 
 public class Vehicule {
@@ -17,14 +17,18 @@ public class Vehicule {
 		this.deplacementHist = deplacementHist;
 	}
 	
+	//Permet de récupérer la valeur de la variable posX
 	public int getPosX()
 	{
+		//Changement du type de la variable de double à int
 		int posX = (int) this.posX;
 		return posX;
 	}
 	
+	//Permet de récupérer la valeur de la variable posY
 	public int getPosY()
 	{
+		//Changement du type de la variable de double à int
 		int posY = (int) this.posY;
 		return posY;
 	}
