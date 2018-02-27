@@ -9,6 +9,7 @@ public class Fenetre extends JFrame
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		//Appel de la classe Dessin
 		Dessin pan = new Dessin();
 		
 		this.setContentPane(pan);
