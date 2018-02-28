@@ -1,0 +1,42 @@
+package Boucle;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Vehicule {
+	private int num;
+	private double posX;
+	private double posY;
+	private double posZ;
+	private List<Deplacement> deplacementHist;
+	
+	public Vehicule(int num, double posX, double posY, double posZ, List<Deplacement>deplacementHist) 
+	{
+		this.num = num;
+		this.posX = posX;
+		this.posY = posY;
+		this.posZ = posZ;
+		this.deplacementHist = deplacementHist;
+	}
+	
+	public Vehicule () 
+	{
+		
+	}
+	
+	//Permet de récupérer la valeur de la variable posX
+	public int getPosX()
+	{
+		//Changement du type de la variable de double à int
+		int posX = (int) this.posX;
+		return posX;
+	}
+	
+	//Permet de récupérer la valeur de la variable posY
+	public int getPosY()
+	{
+		//Changement du type de la variable de double à int
+		int posY = (int) this.posY;
+		return posY;
+	}
+}
