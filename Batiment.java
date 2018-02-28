@@ -1,13 +1,14 @@
 package Boucle;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Batiment 
 {
-	private ArrayList<PointsB> batiment;
+	private List<PointsB> batiment;
 	
 	//Crée un objet Batiment avec une liste de points
-	public Batiment(ArrayList<PointsB> batiment)
+	public Batiment(List<PointsB> batiment)
 	{
 		this.batiment = batiment;
 	}
@@ -18,8 +19,7 @@ public class Batiment
 		this.batiment.add(pointBatiment);
 	}
 
-	public ArrayList<PointsB> getPointB() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PointsB> getPointB() {
+		return batiment;
 	}
 }
