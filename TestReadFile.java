@@ -1,4 +1,4 @@
-package fr.uha.drouhin.testreadfile2;
+package extraction_test;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.StringTokenizer;
 
 /**
  * Lecture d'un fichier (explication technique en vue d'être utilsé dans l'échiquier)
@@ -19,6 +20,7 @@ public class TestReadFile {
 	 */
 	private String filename = null;
 	private static final Pattern p = Pattern.compile("<poly id=\\\"([0-9]+)\\\" type=\\\"([a-zA-Z]+)\\\" color=\\\"(.*)\\\" fill=\\\"([0-9])\\\" layer=\\\"(.*[0-9])\\\" shape=\\\"(.*)\\\"");
+	private static final Pattern k = Pattern.compile("([0-9]+\\.[0-9]+)\\,([0-9]+\\.[0-9]+)");
 
 
 	/**
@@ -47,8 +49,22 @@ public class TestReadFile {
 			    Matcher m = p.matcher(ligne);
 			    if (m.find()) 
 			    {
-			        // ...then you can use group() methods.
-			        System.out.println(m.group(6)); // shape
+			    	String line = (m.group(6));
+			    	StringTokenizer st = new StringTokenizer(line, " ");
+
+			        while (st.hasMoreTokens()) 
+			        {
+			          String token = (st.nextToken());
+			          Matcher n = k.matcher(token);
+
+			  	    	// if an occurrence if a pattern was found in a given string...
+			  	    	if (n.find()) 
+			  	    	{
+			  	    		// ...then you can use group() methods.
+			  	    		System.out.println(n.group(1)); // posX
+			  	    		System.out.println(n.group(2)); // posy
+			         	}
+			        }
 		        }
 			}
 		}
