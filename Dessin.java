@@ -7,8 +7,8 @@ import java.util.List;
 import javax.swing.*;
 
 /**
- * Class dessin dans laquelle on dessine les b‚timents ainsi que les vÈhicules, avec leurs coordonnÈes respectives
- * @author Bryan MAGNAN
+ * Class dessin dans laquelle on dessine les b√¢timents ainsi que les v√©hicules, avec leurs coordonn√©es respectives
+ * @author PTGL
  */
 public class Dessin extends JPanel {
 
@@ -20,8 +20,8 @@ public class Dessin extends JPanel {
 
 	/**
 	 * Le constructeur
-	 * @param batiments : liste des b‚timents
-	 * @param vehicules : liste des vÈhicules
+	 * @param batiments : liste des b√¢timents
+	 * @param vehicules : liste des v√©hicules
 	 */
 	public Dessin (List<Batiment> batiments, List<Vehicule> vehicules) {
 		this.batiments = batiments; 
@@ -34,17 +34,17 @@ public class Dessin extends JPanel {
 	public void paint(Graphics g) {
 
 		/**
-		 * VÈrifie qu'il existe un b‚timent dans la liste des b‚timents.
+		 * V√©rifie qu'il existe un b√¢timent dans la liste des b√¢timents.
 		 * 
 		 */
 		if(batiments != null) {
-			for (Batiment b: batiments) { // Pour chaque b‚timent de la liste faire:
-				List<PointsB>points=b.getPointB(); // la liste points prend les valeurs de tous les points du b‚timent actuel.
-				if (points == null) { // Si il n'existe aucun point pour ce b‚timent:
-					System.out.println("Pas de points pour le b‚timent considÈrÈ"); // Afficher ...
+			for (Batiment b: batiments) { // Pour chaque b√¢timent de la liste faire:
+				List<PointsB>points=b.getPointB(); // la liste points prend les valeurs de tous les points du b√¢timent actuel.
+				if (points == null) { // Si il n'existe aucun point pour ce b√¢timent:
+					System.out.println("Pas de points pour le b√¢timent consid√©r√©"); // Afficher ...
 				} 
 				else {
-					// Boucle qui rÈcupËre les diffÈrentes coordonnÈes
+					// Boucle qui r√©cup√®re les diff√©rentes coordonn√©es
 					for (int i = 0 ; i < points.size() ; i = i + 1) {
 						PointsB p1 = points.get(i) ;
 						i ++ ;
@@ -59,15 +59,15 @@ public class Dessin extends JPanel {
 				}
 			}
 		}
-		if(vehicules != null) { // VÈrifie la prÈsence de vÈhicules dans la liste
+		if(vehicules != null) { // V√©rifie la pr√©sence de v√©hicules dans la liste
 			for (Vehicule v : vehicules) {
-				g.setColor(Color.RED); // VÈhicules en rouge
-				g.fillRect(v.getPosX(), v.getPosY(), 10, 10); // Dimensions d'un vÈhicule
+				g.setColor(Color.RED); // V√©hicules en rouge
+				g.fillRect(v.getPosX(), v.getPosY(), 10, 10); // Dimensions d'un v√©hicule
 			}
 		}
 		else
 		{
-			System.out.println("Mayday on a un problËme ^^' ...");
+			System.out.println("Mayday on a un probl√®me ^^' ...");
 		}
 		
 		
