@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu May 26 17:34:07 2016 by SUMO polyconvert Version 0.23.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/polyconvertConfiguration.xsd">
+
+    <input>
+        <net-file value="sbg.net.xml"/>
+        <osm-files value="colmar800m_bbox.osm.xml"/>
+        <type-file value="/home/frederic/Documents/VANET/ns-3.15/frederic/scripts/type_sumo_poly.xml"/>
+    </input>
+
+    <output>
+        <output-file value="sbg.poly.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <location netOffset="-407547.85,-5381850.63" convBoundary="-1759.62,-1209.17,2019.36,2185.24" origBoundary="7.722778,48.571798,7.773766,48.602762" projParameter="+proj=utm +zone=32 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+     <poly id="15726858#1" type="building" color="255,230,230" fill="1" layer="2.00" shape="647.53,412.37 655.92,408.50 656.55,409.89 664.36,406.45 663.68,404.91 671.95,401.10 669.36,395.36 672.89,393.78 673.55,395.34 682.27,391.40 683.32,393.78 686.16,392.51 685.12,390.11 708.10,379.72 707.82,379.07 708.21,378.91 703.83,369.55 688.30,376.64 676.72,350.82 691.91,343.81 691.67,343.33 692.08,343.12 687.64,333.47 679.28,337.29 666.72,343.05 664.32,344.15 652.89,349.38 653.47,350.93 649.91,352.52 647.17,346.87 638.86,350.51 638.21,349.06 630.52,352.70 631.09,354.11 623.59,357.47 622.67,357.89 625.86,364.88 628.05,363.91 632.14,372.81 630.68,373.44 634.04,380.83 632.81,381.38 634.64,385.36 636.36,389.12 637.58,388.52 641.10,396.10 642.48,395.44 646.55,404.40 644.23,405.35 647.53,412.37"/>
+</additional>
