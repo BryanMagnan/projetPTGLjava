@@ -38,6 +38,17 @@ public class Dessin extends JPanel {
 				}
 			}
 		}
+		if(vehicules != null) {
+			for (Vehicule v : vehicules) {
+				System.out.println(v.getPosX());
+				System.out.println(v.getPosY());
+				g.drawRect(v.getPosX(), v.getPosY(), 10, 10);
+			}
+		}
+		else
+		{
+			System.out.println("Mayday on a un problème ^^' ...");
+		}
 	}
 
 	public void paintG(Graphics g) {
