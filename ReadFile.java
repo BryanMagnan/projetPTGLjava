@@ -13,8 +13,8 @@ import java.util.StringTokenizer;
 
 /**
  * Lecture d'un fichier
- * (Template inspiré du cour de Frédéric DROUHIN)
- * @author Yohan BRABAND 
+ * (Template inspirÃ© du cour de FrÃ©dÃ©ric DROUHIN)
+ * @author PTGL
  */
 public class ReadFile {
 
@@ -28,7 +28,7 @@ public class ReadFile {
 
 
 	/**
-	 * Constructeur par défaut 
+	 * Constructeur par dÃ©faut 
 	 */
 	public ReadFile(){
 
@@ -36,7 +36,7 @@ public class ReadFile {
 
 	/**
 	 * Lecture d'un fichier
-	 * @param filename nom du fichier à lire
+	 * @param filename nom du fichier Ã  lire
 	 * @throws FileNotFoundException en cas d'erreur d'ouverture
 	 */
 	public ArrayList<Batiment> readBatiment (String filename) throws FileNotFoundException {
@@ -46,7 +46,7 @@ public class ReadFile {
 
 		
 		/**
-		 * Déclarations
+		 * DÃ©clarations
 		 */
 		Scanner scanner = null ;
 
@@ -108,7 +108,7 @@ public class ReadFile {
 
 
         try {
-            scanner = new Scanner(new BufferedReader(new FileReader(filename))); // donne le rôle de scanner
+            scanner = new Scanner(new BufferedReader(new FileReader(filename))); // donne le rÃ´le de scanner
             int i = 0;
             int num = 0;
             double posX = 0;
