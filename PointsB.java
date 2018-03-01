@@ -1,6 +1,6 @@
 /**
- * Class des points des bâtiments
- * @author Valentin THIERRY
+ * Class des points des bÃ¢timents
+ * @author PTGL
  */
 public class PointsB 
 {
@@ -11,9 +11,9 @@ public class PointsB
 	private double pointY;
 	
 	/**
-	 * Crée un objet Point
-	 * @param pointX : coordonnées de X
-	 * @param pointY : coordonnées de Y
+	 * CrÃ©e un objet Point
+	 * @param pointX : coordonnÃ©es de X
+	 * @param pointY : coordonnÃ©es de Y
 	 */
 	public PointsB(double pointX, double pointY)
 	{
@@ -22,20 +22,20 @@ public class PointsB
 	}
 	
 	/**
-	 * Permet de récupérer la valeur de la variable x
-	 * @return récupère la valeur de pointX
+	 * Permet de rÃ©cupÃ©rer la valeur de la variable x
+	 * @return rÃ©cupÃ¨re la valeur de pointX
 	 */
 	public int getPointX()
 	{
-		// Changement du type de la variable de double à int
+		// Changement du type de la variable de double Ã  int
 		int pointX = (int) this.pointX;
 		return pointX;
 	}
 	
-	//Permet de récupérer la valeur de la variable y
+	//Permet de rÃ©cupÃ©rer la valeur de la variable y
 	public int getPointY()
 	{
-		//Changement du type de la variable de double à int
+		//Changement du type de la variable de double Ã  int
 		int pointY = (int) this.pointY;
 		return pointY;
 	}
