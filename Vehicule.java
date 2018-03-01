@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Class Vehicule
- * @author Yohan BRABAND
+ * @author PTGL
  */
 public class Vehicule {
 	// Attributs
@@ -39,17 +39,17 @@ public class Vehicule {
 	}
 	
 	
-	public int getPosX() //Permet de récupérer la valeur de la variable posX
+	public int getPosX() //Permet de rÃ©cupÃ©rer la valeur de la variable posX
 	{
-		//Changement du type de la variable de double à int
+		//Changement du type de la variable de double Ã  int
 		int posX = (int) this.posX;
 		return posX;
 	}
 	
 	
-	public int getPosY() //Permet de récupérer la valeur de la variable posY
+	public int getPosY() //Permet de rÃ©cupÃ©rer la valeur de la variable posY
 	{
-		//Changement du type de la variable de double à int
+		//Changement du type de la variable de double Ã  int
 		int posY = (int) this.posY;
 		return posY;
 	}
