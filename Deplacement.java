@@ -1,6 +1,6 @@
 /**
- * Class déplacement
- * @author Yohan BRABAND
+ * Class dÃ©placement
+ * @author PTGL
  */
 
 
