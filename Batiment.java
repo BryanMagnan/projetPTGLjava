@@ -1,6 +1,6 @@
  /**
- * Class des b‚timents
- * @author Valentin THIERRY
+ * Class des b√¢timents
+ * @author PTGL
  */
 
 
@@ -17,7 +17,7 @@ public class Batiment
 	private List<PointsB> batiment;
 	
 	/**
-	 * CrÈe un objet Batiment avec une liste de points
+	 * Cr√©e un objet Batiment avec une liste de points
 	 * @param batiment
 	 */
 	public Batiment(List<PointsB> batiment)
@@ -27,7 +27,7 @@ public class Batiment
 	
 	
 	/**
-	 * Ajoute un point ‡ la liste des points du batiment
+	 * Ajoute un point √† la liste des points du batiment
 	 * @param pointBatiment
 	 */
 	public void arrayMaker(PointsB pointBatiment)
