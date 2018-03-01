@@ -1,0 +1,22 @@
+package Boucle;
+import java.util.List;
+
+public class affichageb {
+	public void affichageb(List<Batiment> batiments) {
+		for (Batiment b: batiments) {
+			List<PointsB>points=b.getPointB();
+			for (PointsB p: points) {
+				System.out.println(p.getPointX()+ "/" + p.getPointY());
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
