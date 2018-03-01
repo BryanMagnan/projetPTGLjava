@@ -22,6 +22,7 @@ public class ReadFile {
 	private String filename = null;
 	private static final Pattern p = Pattern.compile("<poly id=\\\"([0-9]+)\\\" type=\\\"([a-zA-Z]+)\\\" color=\\\"(.*)\\\" fill=\\\"([0-9])\\\" layer=\\\"(.*[0-9])\\\" shape=\\\"(.*)\\\"");
 	private static final Pattern k = Pattern.compile("([0-9]+\\.[0-9]+)\\,([0-9]+\\.[0-9]+)");
+	private static final Pattern l = Pattern.compile("\\$node_\\(([0-9]+.?[0-9]*)\\)\\s+set ([a-zA-Z])_ ([0-9]+.?[0-9]*)");
 
 
 	/**
@@ -70,7 +71,6 @@ public class ReadFile {
 			  	    		double posY = Double.parseDouble(n.group(2));
 			  	    		PointsB point = new PointsB(posX, posY);
 			  	    		pointsBatiment.add(point);
-			  	    		//System.out.println("Adding1 point");
 			         	}
 			        }
 		        }
@@ -84,5 +84,63 @@ public class ReadFile {
 		}
 		return listeBatiment;
 	}
+	
+    public ArrayList<Vehicule> readPlacement (String filename) throws FileNotFoundException { 
+        this.filename = filename ;
+        ArrayList<Vehicule> listeVehicule = new ArrayList<Vehicule>();
 
+        // scanne le fichier
+        Scanner scanner = null ; // initialisation du scanner
+
+
+        try {
+            scanner = new Scanner(new BufferedReader(new FileReader(filename))); // donne le rôle de scanner
+            int i = 0;
+            int num = 0;
+            double posX = 0;
+            double posY = 0;
+
+            while (scanner.hasNextLine()) { // tant qu'il y a une nouvelle ligne, faire:
+                String ligne = scanner.nextLine(); // Enregistre cette ligne dans "ligne"
+                Matcher o = l.matcher(ligne); // comparaison
+                if (o.find()) // Si on trouve quelque chose:
+                {
+                	System.out.println(o.group(3));
+                    i++;
+                    if(i == 1) 
+                    {
+                    	num = Integer.parseInt(o.group(1));
+                    	posX = Double.parseDouble(o.group(3));
+                    }
+                    else if(i == 2)
+                    {
+                    	posY = Double.parseDouble(o.group(3));
+                    }
+                    else if(i == 3)
+                    {
+                    	i = 0;
+                    	ArrayList<Deplacement> deplacementHist = new ArrayList<Deplacement>();
+                    	Vehicule vehicule = new Vehicule(num, posX, posY, 1.5, deplacementHist);
+                    	listeVehicule.add(vehicule);
+                    	
+                    }
+                    else 
+                    {
+                    	System.out.println("Erreur 404");
+                    }
+                }
+                else
+                {
+                	System.out.println("Erreur :/");
+                }
+            }
+        }
+        finally {
+            // Ne pas oublier de fermer le fichier que j'ai eu une exception ou non !
+            if (scanner != null) {
+                scanner.close();
+            }
+        }
+        return listeVehicule;
+    }
 }
